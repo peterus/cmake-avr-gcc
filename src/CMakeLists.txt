@@ -2,19 +2,10 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
 
 SET(CMAKE_SYSTEM_NAME Generic)
 
-# where is the target environment 
-SET(CMAKE_FIND_ROOT_PATH /usr/lib/gcc/avr)
-
 SET(CMAKE_C_COMPILER avr-gcc)
 SET(CMAKE_CXX_COMPILER avr-g++)
 
-# search for programs in the build host directories
-SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
-# for libraries and headers in the target directories
-SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
-
-# dissabke rdynamic from linker flags
+# disable rdynamic from linker flags
 SET(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS)
 
 PROJECT(Test_Project)
